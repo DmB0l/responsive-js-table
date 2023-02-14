@@ -1,0 +1,62 @@
+<!Doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <meta charset="utf-8">
+    <title>
+        test infotecs
+    </title>
+    <script type="text/javascript" src="../js/main.js" async></script>
+</head>
+
+<body>
+    <!-- кнопка для выбора json файла -->
+    <input type="file" onchange="readFile(this)"> 
+
+    <!-- кнопка скрыть/показать столбец -->
+    <div id="buttons_field">
+        <button id="hide_button0" onclick="hideColumn(0)">Скрыть 1 столбец</button>
+        <button id="hide_button1" onclick="hideColumn(1)">Скрыть 2 столбец</button>
+        <button id="hide_button2" onclick="hideColumn(2)">Скрыть 3 столбец</button>
+        <button id="hide_button3" onclick="hideColumn(3)">Скрыть 4 столбец</button>
+    </div>
+
+    <div id="table_block">
+        <!-- таблица с информацией -->
+        <table id="first_table">
+            <thead>
+                <tr>
+                    <th class="col0">Имя <button onclick="sortABC(0)">sort ABC</button></th>
+                    <th class="col1">Фамилия <button onclick="sortABC(1)">sort ABC</button></th>
+                    <th class="col2" id="about_col">Описание <button onclick="sortABC(2)">sort ABC</button></th>
+                    <th class="col3">Цвет глаз <button onclick="sortABC(3)">sort ABC</button></th>
+                </tr>
+            </thead>
+
+            <tbody>
+            </tbody>
+        </table>
+
+        <!-- таблица для редактирования записей -->
+        <table id="redaction_table">
+            <thead>
+                <tr>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- номер страницы таблицы и кнопки вперед/назад (на одной странице мах 10 записей) -->
+    <div id="slider">
+        <button id="back_button" onclick="prevPage()">назад</button>
+        <p id="number_page">1</p>
+        <button id="next_button" onclick="nextPage()">вперед</button>
+    </div>
+</body>
+
+</html>
